@@ -1,0 +1,14 @@
+.Ctable{
+    margin-top: 5px!important ;
+    align-items: center;
+}
+.container{
+    display: flex;
+    align-items: flex-start;
+
+}
+.Ctitle{
+    display: flex;
+    text-align: center!important;
+    margin-bottom: 10rem;
+}
