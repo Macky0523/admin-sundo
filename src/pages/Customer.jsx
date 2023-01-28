@@ -1,3 +1,4 @@
+import { textAlign } from '@mui/system';
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import '../components/styles/Customer.css'
@@ -63,7 +64,7 @@ class Customer extends React.Component {
         const customerFound = this.state.cusomer_rs && this.state.cusomer_rs.length;
         if(customerFound) {
             return (
-                <><><h1 className="Ctitle">Customer</h1></><><div id="msg"></div><button type="button" className="btn btn-danger" onClick={this.deleteEmployees}>Remove</button><Table className='CTable' striped bordered hover variant="dark">
+            <><><h1 className="Ctitle" >Customer</h1></><><div id="msg"></div><button type="button" className="btn btn-danger" onClick={this.deleteEmployees}>Remove</button><Table className='CTable' striped bordered hover variant="dark">
                     <thead>
                         <tr>
                             {this.headers.map(function (h) {

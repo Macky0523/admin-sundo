@@ -9,6 +9,6 @@
 }
 .Ctitle{
     display: flex;
-    text-align: center!important;
+    align-self: center;
     margin-bottom: 10rem;
 }
