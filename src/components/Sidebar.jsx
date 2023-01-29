@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+
 import {
     FaTh,
     FaBars,
@@ -16,6 +17,8 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = ({children}) => {
     const[isOpen ,setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
+
+
     const menuItem=[
         {
             path:"/dashboard",

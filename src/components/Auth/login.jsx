@@ -1,38 +1,38 @@
-import React, {useEffect,useState} from "react";
+import React, {useContext, useEffect,useState} from "react";
 import { gapi } from "gapi-script";
 import { useNavigate } from "react-router-dom";
 import "./login.css"
 import logo from '../Auth/logo.png'
+import { AuthenticationContext } from "../../AuthContext";
+
+
 const LoginForm = () => {
 
-    const navigate = useNavigate();
+ const navigate = useNavigate();
 
-function handleClick(){
-    navigate("/dashboard")
+ const {loginRequest} = useContext(AuthenticationContext);
 
-}
+ const [email,setEmail] = useState('text');
+ const [password,setPassword] = useState('text');
 
-    useEffect(() => {
-        function start() {
-            gapi.client.init({
-                clientId: "79474543031-tmjo35916ufn421ej3u1i2ljao2apr4s.apps.googleusercontent.com",
-                scope: ""
-            })
-        }
-        gapi.load('client: auth2', start)
-        
-    })
+    
     return (
         <div className="cover">
-            <img src = {logo} alt=''/>
-            <input type="text" placeholder="username" />
-            <input type="password" placeholder="password" />
 
-            <div className="login-btn" onClick={(e) => handleClick()}>Login</div>
-
-        
-
+        <div className="pannel1">
             
+            <img src = {logo} alt=''/>
+
+            <div className="inputfieldcontainer">
+                <input className="inputfield" type="text" placeholder="username"  onChange={(e)=>setEmail(e.target.value)}/>
+                <input className="inputfield" type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
+
+                <div className="login-btn" onClick={(e) => {loginRequest(email,password)}}>LOGIN</div>
+            </div>
+
+        </div>
+    
+           
         </div>
     )
 }
