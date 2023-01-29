@@ -1,15 +1,10 @@
-import React, {useContext, useEffect,useState} from "react";
-import { gapi } from "gapi-script";
-import { useNavigate } from "react-router-dom";
+import React, {useContext,useState} from "react";
 import "./login.css"
 import logo from '../Auth/logo.png'
 import { AuthenticationContext } from "../../AuthContext";
 
 
 const LoginForm = () => {
-
- const navigate = useNavigate();
-
  const {loginRequest} = useContext(AuthenticationContext);
 
  const [email,setEmail] = useState('text');

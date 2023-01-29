@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createContext } from "react";
+import Swal from "sweetalert2";
 
+ 
 export const AuthenticationContext = createContext();
 
 export const AuthenticationProvider = ({children}) => {
+    const alert = ()=>  {
+        Swal.fire("INCORRECT USERNAME OR PASSOWRD!")
+    }
 
     const [loginaccess,setLoginaccess] = useState(false)
 
@@ -16,7 +21,7 @@ export const AuthenticationProvider = ({children}) => {
             setLoginaccess(true)
         }
         else{
-            console.log('Error! did not match')
+            alert();
         }
 
 

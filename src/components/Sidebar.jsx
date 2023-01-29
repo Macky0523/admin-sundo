@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 
 import {
     FaTh,
@@ -51,7 +51,7 @@ const Sidebar = ({children}) => {
             icon:<FaRegChartBar/>
         },
         {
-            path:"/login",
+            path:"/",
             name:"Signout",
             icon:<FaSignOutAlt/>
         },

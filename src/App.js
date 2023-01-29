@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import Loginroutes from './Loginroutes/'
 import Webroutes from './Approutes/';
 import { useContext } from 'react';

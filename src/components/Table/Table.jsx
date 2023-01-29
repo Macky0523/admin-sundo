@@ -9,6 +9,7 @@ class Booking extends React.Component {
             { key: 'bid', label: 'ID'},
             { key: 'driver', label: 'Driver' },
             { key: 'customer', label: 'Customer' },
+            { key: 'Vehicletype', label: 'Vehicle Type' },
             { key: 'pu', label: 'Pick Up' },
             { key: 'df', label: 'Drop Off' },
             { key: 'date', label: 'Date Booked' },
@@ -83,6 +84,7 @@ class Booking extends React.Component {
                                     </td>
                                     <td>{item.driver}</td>
                                     <td>{item.customer}</td>
+                                    <td>{item.Vehicletype}</td>
                                     <td>{item.pu}</td>
                                     <td>{item.df}</td>
                                     <td>{item.date}</td>
