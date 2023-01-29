@@ -17,7 +17,7 @@ const LoginForm = () => {
         <div className="pannel1">
             
             <img src = {logo} alt=''/>
-
+                         
             <div className="inputfieldcontainer">
                 <input className="inputfield" type="text" placeholder="username"  onChange={(e)=>setEmail(e.target.value)}/>
                 <input className="inputfield" type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
